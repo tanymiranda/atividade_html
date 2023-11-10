@@ -1,0 +1,169 @@
+<!DOCTYPE>
+<html lang="pt-br">
+    <head>
+<meta chasert="UTF-8">
+<meta name="viewport" content="width=, initial-scale=1.0">
+<link rel="stylesheet" href="corpo.css">
+<title> Formulário </title>
+    </head>
+    <body>
+    <div class="container">
+        <h1 id="title"> Formulário de Contato</h1>
+    <form>
+    <div class="fore-group">
+        <label for="fname">Nome:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Sobrenome:</label><br>
+        <input type="text" id="lname" name="lname">
+    </div>
+
+    <div class="fore-group">
+        <label for="email">E-mail</label><br>
+        <input type="email" id="email">
+    </div>
+    <div class="form-group">
+        <label for="numero">Número:</label><br>
+  <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+    </div>
+</div>
+</form>
+
+<div class="container">
+    <h1>Senha e Usuário</h1>
+    <form  action="/action_page.php">
+    <div class="fore-group">
+        <label for="username">Usuário:</label><br>
+        <input type="text" id="username" name="username" value=""><br>
+        <label for="pwd">Senha:</label><br>
+        <input type="password" id="pwd" name="pwd" value=""><br><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reiniciar">
+    </div>
+</div>
+</form>
+    <div class="container">
+        <h1>Quiz - Para te conhecer</h1>
+        <form>
+    <div class="fore-group">
+        <p> Qual cor você prefere?</p>
+        <input type="radio" id="blue" name="fav_color" value="blue">
+        <label for="blue">Azul</label><br>
+        <input type="radio" id="css" name="fav_color" value="purple">
+        <label for="purple">Roxo</label><br>
+        <input type="radio" id="black" name="fav_color" value="black">
+        <label for="black">Preto</label>
+    </div>
+    <div class="form-group">
+        <p>Quais cidades você gostaria de viajar?</p>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Pimenta Bueno">
+  <label for="vehicle1">Pimenta Bueno</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Cacoal">
+  <label for="vehicle2">Cacoal</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Fora">
+  <label for="vehicle3"> Somente fora do Estado.</label><br><br>
+
+  <div class="form-group">
+    <label for="favcolor">Diga sua cor favorita:</label>
+<input type="color" id="favcolor" name="favcolor">
+</div><br>
+
+<div class="form-group"><br>
+    <label for="birthday">Qual o dia do seu aniversário?</label>
+    <input type="date" id="birthday" name="birthday">
+</div>
+
+<div class="form-group"><br>
+    <label for="quantity">Qual a sua idade:</label>
+    <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="30">
+</div>
+<br>
+  <input type="button" onclick="alert('Você concluiu o Quiz!')" value="Finalizar">
+    </div>
+    
+</div>
+</form>
+
+<div class="container">
+    <h1>Estudos!</h1>
+    <form>
+        <div class="fore-group">
+            <label for="Nome_Completo">Curso:</label><br>
+            <input type="text" id="Nome_Completo">
+        </div>
+    <div class="form-group"><br>
+        <label for="datemax">Quando começou a cursar seu curso:</label>
+  <input type="date" id="datemax" name="datemax" max="1990-12-31"><br><br>
+  <label for="datemin">Quando vai terminar o curso:</label>
+  <input type="date" id="datemin" name="datemin" min="2040-01-01">
+    </div>
+    <div class="form-group"><br>
+        <input type="image" src="estudos.jpeg" alt="Submit" width="190" height="80">
+    </div>
+</div>
+</form>
+
+<div class="container">
+    <h1>Seu perfil:</h1>
+    <form>
+    <div class="form-group">
+        <label for="myfile">Selecione uma foto sua:</label>
+  <input type="file" id="myfile" name="myfile"><br>
+    </div>
+
+    <div class="form-group"><br>
+        <label for="fname">Apelido:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+
+        <div class="form-group">
+            <label for="homepage">Adicione uma rede social (link):</label>
+            <input type="url" id="homepage" name="homepage">
+        </div>
+        
+        <div class="form-group"><br>
+            <label for="bdaymonth">Data de envio (mês e ano):</label><br>
+            <input type="month" id="bdaymonth" name="bdaymonth">
+        </div><br>
+        <input type="hidden" id="custId" name="custId" value="3487">
+        <input type="submit" value="Enviar"><br>
+    </div>
+</div>
+</form>
+<div class="container">
+    <h1>Opinião sobre si mesmo:</h1>
+    <form>
+    <div class="form-group"><br>
+        <label for="quantity">Qual nota você se dá? (número de 1 à 10):</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10">
+    </div>
+    <div class="form-group"><br>
+        <label for="vol">Como você avalia seu humor (de 0 à 100):</label>
+  <input type="range" id="vol" name="vol" min="0" max="50">
+    </div>
+    <div class="form-group"><br>
+        <label for="week">Selecione uma data importante para você:</label>
+  <input type="week" id="week" name="week">
+    </div>
+    <div class="form-group"><br>
+        <label for="appt">Que horas você costuma acordar?</label>
+  <input type="time" id="appt" name="appt">
+    </div>
+</div>
+</form>
+
+<div class="container">
+    <h1>Extras:</h1>
+    <form>
+    <div class="form-group">
+        <label for="gsearch">Pesquisar no Google:</label>
+  <input type="search" id="gsearch" name="gsearch">
+
+    </div>
+    <div class="form-group"><br>
+        <label for="birthdaytime">Quando visitou aqui?</label>
+        <input type="datetime-local" id="visitou" name="birthdaytime"><br>
+    </div>
+    <p> Obrigada por responder o formulário.</p>
+        </form>
+    </div>
+</body>
+</html>
