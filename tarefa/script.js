@@ -31,6 +31,11 @@ function add(event) {
     btnAcao.addEventListener('click', function () {
         // Criar formulário temporário para edição
         const formEdicao = document.createElement('form');
+         // Adicionar campo de edição para Descrição
+         const inputEdicaoDescricao = document.createElement('input');
+         inputEdicaoDescricao.type = 'text';
+         inputEdicaoDescricao.value = cellDescricao.textContent;
+         formEdicao.appendChild(inputEdicaoDescricao);
 
         // Adicionar campo de edição para Responsável
         const inputEdicaoResponsavel = document.createElement('input');
@@ -43,6 +48,7 @@ function add(event) {
         btnConfirmar.textContent = 'Confirmar';
         btnConfirmar.addEventListener('click', function () {
             // Atualizar os valores da linha com os valores editados
+            cellDescricao.textContent = inputEdicaoDescricao.value;
             cellResponsavel.textContent = inputEdicaoResponsavel.value;
             // Remover o formulário de edição
             formEdicao.remove();
@@ -54,5 +60,16 @@ function add(event) {
     });
     cellAcao.appendChild(btnAcao);
     const btnEditar = document.getElementById('btnEditar');
-    btnEditar.style.display = 'inline';
+    btnEditar.style.display = 'none';
+
+     // Botão de Exclusão
+     const btnExcluir = document.createElement('button');
+     btnExcluir.className = 'brnAcao';
+     btnExcluir.innerHTML = '<i class="fa fa-trash"></i>';
+     btnExcluir.addEventListener('click', function () {
+         // Lógica de exclusão
+         table.deleteRow(newRow.rowIndex);
+         // 
+     });
+     cellAcao.appendChild(btnExcluir);
 }
