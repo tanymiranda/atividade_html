@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1>Lista de tarefas</h1>
+    <form onsubmit="add(event)">
+        <label for="descricao">Descrição da tarefa:</label>
+        <input type="text" id="descricao" placeholder="Digite a descrição da tarefa">
+
+        <label for="responsavel">Responsável pela tarefa:</label>
+        <input type="text" id="responsavel" placeholder="Digite o responsavel pela tarefa">
+
+        <input type="submit" value="Adicionar na lista de tarefas">
+    </form>
+    <div>
+        <table id="lista-de-tarefas">
+            <tr>
+                <th>Descrição da tarefa</th>
+                <th>Status da tarefa</th>
+                <select id="statusSelect" style="display: none;">
+                    <option value="Pendente">Pendente</option>
+                    <option value="Concluída">Concluída</option>
+                    <option value="Cancelada">Cancelada</option>
+                </select>
+                <th>Responsável pela tarefa</th>
+                <button class ="brnAcao" id="btnEditar" style="display:none;"> <i class="fa fa-pencil"></i> </button>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript" src="scriptt.js">
+    </script>
+</body>
+</html>
