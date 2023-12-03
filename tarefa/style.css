@@ -40,10 +40,8 @@ th, td {
 th {
     background-color: #f2f2f2;
 }
-.brnAcao{
-position: absolute;
-top: 47,1%;
-left: 75%;
-transform: translate (-47%, -80%);
 
+.brnAcao {
+    display: flex;
+    gap: 5px; /* Espaçamento entre os botões */
 }
